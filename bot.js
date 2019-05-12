@@ -1,12 +1,12 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "+";
-var adminprefix = '#'
+var prefix = "c";
+var adminprefix = 'y '
 
 
 const developers = ["548223690110664711"]
 client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
+    var argresult = message.content.split(`wlc`).slice(1).join('wlc');
       if (!developers.includes(message.author.id)) return;
       
   if (message.content.startsWith(adminprefix + 'setg')) {
@@ -14,7 +14,7 @@ client.on('message', message => {
       message.channel.send(`**✅   ${argresult}**`)
   } else 
      if (message.content === (adminprefix + "leave")) {
-    message.guild.leave();        
+    message.guild.leave(wlc);        
   } else  
   if (message.content.startsWith(adminprefix + 'setw')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
